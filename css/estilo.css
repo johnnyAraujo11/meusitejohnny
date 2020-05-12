@@ -1,0 +1,37 @@
+/* Aula inicial :D */
+body{
+    background-image: url("https://engmecanichome.files.wordpress.com/2019/03/97e0bdf761c1dabdb5979778aa89a54f.jpg");
+    background-size: auto 100vh;
+    color: white;   
+    font-family: Georgia;
+    
+  }
+  
+  .menu{
+    background-color: rgba(255, 255 ,255, 0.7);
+  }
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  } 
+  .menu li{
+    list-style: none; 
+  }
+  .menu a{
+    color: rgb(70, 50, 50);
+    text-decoration: none;
+  }
+  .menu a:hover{
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  .site-subtitle,
+  .site-title{
+    font-size: 28pt;
+    text-align: center;
+  }
+  
+  .site-subtitle{
+    font-style: oblique;
+  }
