@@ -1,37 +1,77 @@
-/* Aula inicial :D */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
-    background-image: url("https://engmecanichome.files.wordpress.com/2019/03/97e0bdf761c1dabdb5979778aa89a54f.jpg");
+    background: url("../image/background.jpg");
     background-size: auto 100vh;
     color: white;   
     font-family: Georgia;
-    
+    font-size: 10px;
   }
-  
-  .menu{
-    background-color: rgba(255, 255 ,255, 0.7);
+/*se a tela tiver no mínimo 400px essa tela vai excutar as seguintes caracteristicas abaixo*/
+/*breakpoint*/
+@media(min-width: 400px){
+  body{
+    font-size: 10pt;
   }
-  .menu ul{
-    display: flex;
-    justify-content: space-around;
+}
+@media(min-width: 600px){
+  body{
+    font-size: 12pt;
+  }
+}
+header{
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+ }
+
+.menu{
+  position: fixed;
+  width: 100vw;
+  /*'top' só funciona se uma 'position' foi declarado*/
+  top:0;
+  }
+.menu ul{
+  display: flex;
+  justify-content: space-around;
   } 
-  .menu li{
-    list-style: none; 
+.menu li{
+  list-style: none; 
   }
-  .menu a{
-    color: rgb(70, 50, 50);
-    text-decoration: none;
+.menu a{
+  border: 1px solid black;
+  color: white;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  transition: 0.4s;
   }
-  .menu a:hover{
-    color: blue;
-    text-decoration: underline;
+.menu a:hover{
+  color: blue;
+  text-decoration: underline;
+  background-color: white;
+  border-radius: 10px;
   }
   
-  .site-subtitle,
-  .site-title{
-    font-size: 28pt;
-    text-align: center;
-  }
+.site-subtitle,
+.site-title{
+  color: white;
   
-  .site-subtitle{
-    font-style: oblique;
+  text-align: center;
   }
+
+.site-subtitle{
+  font-style: oblique;
+  }
+
+/*exemplo que omitido, porque já reduzir a imagem usando editor de imagens*/
+/*
+.img-portifolio{
+  widht: 180px;
+  height: 180px;
+}
+*/
