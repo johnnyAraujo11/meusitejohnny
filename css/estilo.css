@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@600&family=Press+Start+2P&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -7,7 +8,7 @@ body{
     background: url("../image/background.jpg");
     background-size: auto 100vh;
     color: white;   
-    font-family: Georgia;
+    font-family: 'Fahkwang', sans-serif;
     font-size: 10px;
   }
 /*se a tela tiver no mínimo 400px essa tela vai excutar as seguintes caracteristicas abaixo*/
@@ -24,7 +25,7 @@ body{
 }
 header{
   display: flex;
-  height: 50vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
  }
@@ -60,18 +61,51 @@ header{
 .site-subtitle,
 .site-title{
   color: white;
-  
+  font-family: 'Press Start 2P', cursive;
   text-align: center;
   }
 
 .site-subtitle{
   font-style: oblique;
+  line-height: 2.5em; 
   }
+  .portfolio{
+    padding: 2em;
+    height: 100vh;
+  }
+  .portfolio h2{
+    color: rgb(161, 150, 219);
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+ .portfolio .grid {
+    display: grid;
+    gap: 2em;
+    justify-content: center;
+  }
+  @media(min-width:560px){
+    .portfolio .grid{
+      grid-template-columns: 240px 240px;
+      /*justify-content: space-around;*/
+    }
+  } 
+  @media(min-width:850px){
+    .portfolio .grid{
+      /*Utilizando repeat(nº de repetições, valor(px))*/
+      grid-template-columns: repeat(3, 240px);
+      align-content: center;
+      justify-content: center;
+      height: calc(100vh - 4em - 41.6px); 
+    }
+  }
+ .portfolio figure{
+  text-align: center;
+}
 
 /*exemplo que omitido, porque já reduzir a imagem usando editor de imagens*/
-/*
-.img-portifolio{
-  widht: 180px;
+ .img-portifolio{
+  width: 250px;
   height: 180px;
+  object-fit: cover;
+  object-position: top;
 }
-*/
