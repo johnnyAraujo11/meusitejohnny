@@ -1,0 +1,13 @@
+.portfolio img{
+    display: block;    
+    cursor: pointer;
+    transition: 0.9s;
+    
+}
+
+.portfolio img:hover{
+    
+    border: 15px solid transparent;
+    border-radius: 10px;
+    
+}

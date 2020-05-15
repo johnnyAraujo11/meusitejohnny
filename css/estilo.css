@@ -44,7 +44,6 @@ header{
   list-style: none; 
   }
 .menu a{
-  border: 1px solid black;
   color: white;
   display: block;
   padding: 5px;
@@ -53,9 +52,8 @@ header{
   }
 .menu a:hover{
   color: blue;
-  text-decoration: underline;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   }
   
 .site-subtitle,
@@ -104,8 +102,10 @@ header{
 
 /*exemplo que omitido, porque já reduzir a imagem usando editor de imagens*/
  .img-portifolio{
+  border-radius: 10px;
   width: 250px;
   height: 180px;
   object-fit: cover;
   object-position: top;
+  
 }
