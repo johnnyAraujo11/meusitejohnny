@@ -35,6 +35,7 @@ header{
   width: 100vw;
   /*'top' só funciona se uma 'position' foi declarado*/
   top:0;
+  z-index: 1;
   }
 .menu ul{
   display: flex;
@@ -48,7 +49,7 @@ header{
   display: block;
   padding: 5px;
   text-decoration: none;
-  transition: 0.4s;
+  transition: color, background-color, border-radius, 0.4s;
   }
 .menu a:hover{
   color: blue;
@@ -56,6 +57,21 @@ header{
   border-radius: 15px;
   }
   
+.textoNome{
+  transform: scale(0.2) translateZ(0vh);
+  opacity: 0;
+  animation: linear 2s animaTextoNome forwards;
+}
+
+/*podemo usar tanto % quanto from e to*/
+@keyframes animaTextoNome{
+  to{
+    transform: scale(1) translateZ(0vh);
+    opacity: 1;
+  }
+}  
+
+
 .site-subtitle,
 .site-title{
   color: white;
@@ -67,15 +83,20 @@ header{
   font-style: oblique;
   line-height: 2.5em; 
   }
+
+  .contatos,
   .portfolio{
     padding: 2em;
-    height: 100vh;
+    min-height: 100vh;
   }
+  
+ .contatos,
   .portfolio h2{
-    color: rgb(161, 150, 219);
-    margin-bottom: 1.5em;
+    color: rgb(233, 227, 227);
+    margin-bottom: 1.3em;
     font-size: 2em;
   }
+ 
  .portfolio .grid {
     display: grid;
     gap: 2em;
@@ -96,16 +117,36 @@ header{
       height: calc(100vh - 4em - 41.6px); 
     }
   }
+  
  .portfolio figure{
   text-align: center;
 }
 
 /*exemplo que omitido, porque já reduzir a imagem usando editor de imagens*/
- .img-portifolio{
+ .img-portfolio{
   border-radius: 10px;
   width: 250px;
   height: 180px;
   object-fit: cover;
+  /*mexe na imagem movendo-a estaticamente*/
   object-position: top;
-  
+  transform: scale(1);
+  transition: 600ms;
+}
+.img-portfolio:active,
+.img-portfolio:hover{
+    transform: scale(1.2) rotateZ(36deg) 
+}
+.contatos .icons{
+  text-align: center;
+}
+.contatos a{
+  color: whitesmoke;
+  font-size: 2em;
+}
+
+.contatos a:active,
+.contatos a:hover{
+  text-decoration: none;
+  text-shadow: 5px 5px 5px #fffefe;
 }
