@@ -1,58 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Johnny</title>
-    <link rel="stylesheet" href="css/estilo.css"/>
-    <script language = "javascript" src = "javascript/efeitos.js"></script>
-    <link rel="stylesheet" href="css/efeitos.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/447f744c15.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Johnny</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <script language="javascript" src="javascript/efeitos.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/447f744c15.js" crossorigin="anonymous"></script>
 
 </head>
+
 <body>
-    <header>
-        <nav class="menu">
-          <ul>
-            <li><a href="https://www.google.com.br/">Sobre</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </nav>
-        <div class = "textoNome">
-          <h1 id = "texto" class="site-title">Johnny Araújo</h1>
-          <h2 class="site-subtitle">Computer Engineering</h2>
-        </div>
-      </header>
-  <section class="portfolio" id = "portfolio">
-      <h2>Portifólio</h2>
-      <div class="grid">
-        <figure>
-          <img class="img-portfolio" src="image/ecommerce.jpg" alt="eCommerce"/>
-          <figcaption>eCommerce</figcaption>
-        </figure>
-        <figure>
-          <a href="mobile.html"><img class="img-portfolio" src="image/mobile.jpg" alt="mobile"/></a>
-          <figcaption>Mobile</figcaption>
-        </figure>
-        <figure>
-          <img class="img-portfolio" src="image/code.jpg" alt="webDesine"/>
-          <figcaption>Web Design</figcaption>
-        </figure>
-        <figure>
-          <a href = "projetos.pessoais.html"><img class="img-portfolio" src="image/projetos-pessoais.jpg" alt="projetoPessoais"/></a>
-          <figcaption>Projetos Pessoais</figcaption>
-        </figure>
-      </div>
+  <header>
+    <nav class="menu">
+      <ul class="conteiner">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <div class="textoNome">
+      <h1 id="texto" class="site-title">Johnny Araújo</h1>
+      <h2 class="site-subtitle">Engenharia de Computação</h2>
+    </div>
+  </header>
+  <section class="sobre conteiner" id="sobre">
+    <h2>Sobre</h2>
+    <div class=fundo-Texto>
+      <figure class="my-Img">
+        <img src="image/ecommerce.jpg" alt="Johnny Araújo">
+      </figure>
+
+      <p>Olá, meu nome é Johnny Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quod ad explicabo, cum
+        nihil pariatur assumenda
+        et adipisci odio eligendi, eius atque aspernatur ex mollitia fugit quis iste. Voluptates, aperiam?Impedit
+        molestiae praesentium nostrum similique est porro possimus architecto ratione deserunt nisi sapiente quisquam
+        nihil, ea quaerat quam consequatur tempore eum. Vitae, nemo. Animi accusamus quia molestias, sint quasi
+        expedita?</p>
+      <p>Este site foi construído durante a <a target="blank"href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a></p>
+      <p>Início 11/05/2019</p>
+
+    </div>
   </section>
-  <section id="contato" class="contatos">
-      <h2>Contatos</h2>
-      <div class="grid icons">
-          <a target="_blank" id="instagram" href="#"><i class="fab fa-instagram"></i></a>
-          <a target="_blank" id="github" href="#"><i class="fab fa-github"></i></a>
-          <a target="_blank" id="likedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+  <section class="portfolio conteiner" id="portfolio">
+    <h2>Portifólio</h2>
+    <div class="grid">
+
+      <div class="flip-card">
+        <div class="card">
+          <div class="card-front">
+            <figure>
+              <img class="img-portfolio" src="image/ecommerce.jpg" alt="eCommerce" />
+              <figcaption>eCommerce</figcaption>
+            </figure>
+          </div>
+          <div class="card-back">
+            Parte de trás.
+          </div>
+        </div>
       </div>
+
+
+
+      <figure>
+        <a href="mobile.html"><img class="img-portfolio" src="image/mobile.jpg" alt="mobile" /></a>
+        <figcaption>Mobile</figcaption>
+      </figure>
+      <figure>
+        <img class="img-portfolio" src="image/code.jpg" alt="webDesine" />
+        <figcaption>Web Design</figcaption>
+      </figure>
+      <figure>
+        <a href="projetos.pessoais.html"><img class="img-portfolio" src="image/projetos-pessoais.jpg"
+            alt="projetoPessoais" /></a>
+        <figcaption>Projetos Pessoais</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section class="contatos conteiner" id="contato">
+    <h2>Contatos</h2>
+    <div class="grid icons">
+      <a target="_blank" id="instagram" href="#"><i class="fab fa-instagram"></i></a>
+      <a target="_blank" id="github" href="https://github.com/johnnyAraujo11"><i class="fab fa-github"></i></a>
+      <a target="_blank" id="likedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
   </section>
 </body>
+
 </html>

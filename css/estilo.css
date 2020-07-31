@@ -6,11 +6,12 @@
 }
 body{
     background: url("../image/background.jpg");
-    background-size: auto 100vh;
+    background-size: 100wh 100vh;
     color: white;   
     font-family: 'Fahkwang', sans-serif;
     font-size: 10px;
   }
+  
 /*se a tela tiver no mínimo 400px essa tela vai excutar as seguintes caracteristicas abaixo*/
 /*breakpoint*/
 @media(min-width: 400px){
@@ -37,6 +38,7 @@ header{
   top:0;
   z-index: 1;
   }
+  
 .menu ul{
   display: flex;
   justify-content: space-around;
@@ -71,7 +73,6 @@ header{
   }
 }  
 
-
 .site-subtitle,
 .site-title{
   color: white;
@@ -81,22 +82,58 @@ header{
 
 .site-subtitle{
   font-style: oblique;
-  line-height: 2.5em; 
+  line-height: 1.5em; 
   }
-
+  .sobre,
   .contatos,
   .portfolio{
     padding: 2em;
     min-height: 100vh;
   }
-  
- .contatos,
+  @media(min-width: 1200px){
+  .conteiner{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+  }
+
+  .sobre h2,
+  .contatos h2,
   .portfolio h2{
     color: rgb(233, 227, 227);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
     margin-bottom: 1.3em;
-    font-size: 2em;
   }
- 
+
+  .fundo-Texto{
+    background-color: rgba(0,0,0, 0.8);
+    padding-bottom: 1px;
+  }
+  .sobre p{
+    margin-bottom: 1.3em;
+    text-indent: 1.2em;
+    text-align: justify;
+  }
+  .sobre a{
+    color: teal;
+    text-decoration: none;
+  }
+  .sobre a:hover{
+    color: red;
+    text-decoration: underline;
+  }
+  .my-Img{
+    float: right;
+    margin-left: 1.3em;
+    padding: 2px;
+  
+  }
+  .my-Img img{
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    
+  }
  .portfolio .grid {
     display: grid;
     gap: 2em;
@@ -125,7 +162,7 @@ header{
 /*exemplo que omitido, porque já reduzir a imagem usando editor de imagens*/
  .img-portfolio{
   border-radius: 10px;
-  width: 250px;
+  width: 100%;
   height: 180px;
   object-fit: cover;
   /*mexe na imagem movendo-a estaticamente*/
@@ -133,10 +170,41 @@ header{
   transform: scale(1);
   transition: 600ms;
 }
-.img-portfolio:active,
+/*.img-portfolio:active,
 .img-portfolio:hover{
     transform: scale(1.2) rotateZ(36deg) 
+}*/
+.flip-card{
+  perspective: 750px;
 }
+
+.card{
+  position: relative;
+  transform-style: preserve-3d; 
+  transition: transform 2s;  
+}
+.flip-card:hover .card{
+  
+  transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back{
+  border-radius: 10px;
+  backface-visibility: hidden;
+  left: 0;
+  position: absolute;
+  top:0;
+}
+
+.card-back{ 
+  background-color: white;
+  color: black;
+  height: 180px;
+  transform: rotateY(180deg);
+  width: 100%;
+}
+
 .contatos .icons{
   text-align: center;
 }
