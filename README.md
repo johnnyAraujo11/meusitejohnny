@@ -1,2 +1,2 @@
 # meusitejohnny
-site utilizando html e csss
+site utilizando html e css
